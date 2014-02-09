@@ -1,26 +1,265 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Init View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="htssViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="initViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxM-Bb-Q2D">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="46p-5T-vnW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="عربي">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnARClicked:" destination="2" eventType="touchUpInside" id="1c4-ax-AW2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-Kv-t2o">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="v3a-gA-zBl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="English">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnENClicked:" destination="2" eventType="touchUpInside" id="KhW-3U-FKU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yxM-Bb-Q2D" firstAttribute="baseline" secondItem="JUJ-Kv-t2o" secondAttribute="baseline" type="default" id="3NV-Mc-1aJ"/>
+                            <constraint firstItem="JUJ-Kv-t2o" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="djV-n7-VMg"/>
+                            <constraint firstAttribute="trailing" secondItem="yxM-Bb-Q2D" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iEj-lM-mKr"/>
+                            <constraint firstItem="JUJ-Kv-t2o" firstAttribute="top" secondItem="3" secondAttribute="top" constant="252" id="u2F-2a-lBV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAR" destination="yxM-Bb-Q2D" id="4aB-I9-olq"/>
+                        <outlet property="btnEN" destination="JUJ-Kv-t2o" id="th7-1v-WLn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="176"/>
+        </scene>
+        <!--Logout View Controller-->
+        <scene sceneID="lsE-mb-zWn">
+            <objects>
+                <viewController storyboardIdentifier="LoggedOut" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I3i-h9-cPi" customClass="LogoutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="97V-zu-Wy3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MlJ-d3-122" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="166" y="835"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="b1L-YJ-zZG">
+            <objects>
+                <tableViewController storyboardIdentifier="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HXX-VF-b0Y" customClass="MenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sva-fn-kNj">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CbB-Aj-sUs">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HXX-VF-b0Y" id="I5j-gN-xfq"/>
+                            <outlet property="delegate" destination="HXX-VF-b0Y" id="xZG-B0-GDO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQB-dA-WHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="176"/>
+        </scene>
+        <!--Ahlan View Controller-->
+        <scene sceneID="fUM-HK-R2T">
+            <objects>
+                <viewController storyboardIdentifier="أهلا" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYV-6b-ZCe" customClass="AhlanViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ri6-jD-fQN">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDX-gE-imm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrE-D2-cRl">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="تسجيل الدخول">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInClicked:" destination="BYV-6b-ZCe" eventType="touchUpInside" id="RhS-UB-Dzh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfY-8j-7Ko">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="تسجيل الخروج">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutClicked:" destination="BYV-6b-ZCe" eventType="touchUpInside" id="4rl-KH-x7z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="yrE-D2-cRl" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="0vp-ev-pTW"/>
+                            <constraint firstItem="NDX-gE-imm" firstAttribute="centerX" secondItem="Ri6-jD-fQN" secondAttribute="centerX" type="default" id="NZx-Cf-lnq"/>
+                            <constraint firstAttribute="trailing" secondItem="yrE-D2-cRl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Q9M-QW-bpc"/>
+                            <constraint firstItem="yrE-D2-cRl" firstAttribute="top" secondItem="OfY-8j-7Ko" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RY5-KF-vR8"/>
+                            <constraint firstItem="NDX-gE-imm" firstAttribute="top" secondItem="Ri6-jD-fQN" secondAttribute="top" constant="263" id="egZ-6h-IlS"/>
+                            <constraint firstItem="OfY-8j-7Ko" firstAttribute="centerX" secondItem="yrE-D2-cRl" secondAttribute="centerX" type="default" id="niE-Al-voK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblLang" destination="NDX-gE-imm" id="KoK-Z2-ByN"/>
+                        <segue destination="I3i-h9-cPi" kind="modal" identifier="LogOut" animates="NO" id="KzD-G0-ikj"/>
+                        <segue destination="I3i-h9-cPi" kind="modal" identifier="LogIn" animates="NO" id="mOJ-Md-iTp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97L-qU-adh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="42"/>
+        </scene>
+        <!--Safari View Controller-->
+        <scene sceneID="beq-xa-Dm9">
+            <objects>
+                <viewController storyboardIdentifier="سفاري" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DCh-oN-sYy" customClass="SafariViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2So-Yz-pdU">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEA-T5-UIX">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="تشغيل سفاري">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnOnClicked:" destination="DCh-oN-sYy" eventType="touchUpInside" id="XQJ-WP-DbT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTG-Qc-DJn">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="إيقاف سفاري">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnOffClicked:" destination="DCh-oN-sYy" eventType="touchUpInside" id="JyE-wO-dqu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96410848306388097" green="0.98385682397959184" blue="0.38867569478930392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FTG-Qc-DJn" secondAttribute="bottom" constant="189" id="CkZ-gr-IZb"/>
+                            <constraint firstItem="FTG-Qc-DJn" firstAttribute="centerX" secondItem="GEA-T5-UIX" secondAttribute="centerX" type="default" id="MKc-Gf-P2f"/>
+                            <constraint firstItem="GEA-T5-UIX" firstAttribute="top" secondItem="2So-Yz-pdU" secondAttribute="top" constant="252" id="XzT-zF-kug"/>
+                            <constraint firstItem="GEA-T5-UIX" firstAttribute="centerX" secondItem="2So-Yz-pdU" secondAttribute="centerX" type="default" id="qiH-zZ-uv0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRz-45-uin" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="697"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AhlanViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AhlanViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logInClicked:"/>
+                <relationship kind="action" name="logOutClicked:"/>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="lblLang" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ECSlidingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
+        </class>
+        <class className="LogoutViewController" superclassName="ECSlidingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LogoutViewController.h"/>
+        </class>
+        <class className="MenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SafariViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SafariViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="action" name="turnOffClicked:"/>
+                <relationship kind="action" name="turnOnClicked:"/>
+            </relationships>
+        </class>
+        <class className="initViewController" superclassName="ECSlidingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/initViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnARClicked:"/>
+                <relationship kind="action" name="btnENClicked:"/>
+                <relationship kind="outlet" name="btnAR" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnEN" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="KzD-G0-ikj"/>
+    </inferredMetricsTieBreakers>
 </document>

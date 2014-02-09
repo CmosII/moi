@@ -1,5 +1,5 @@
 //
-//  htssViewController.h
+//  SafariViewController.h
 //  moi
 //
 //  Created by shjmun Mac on 11/11/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface htssViewController : UIViewController
-
+@interface SafariViewController : UIViewController
+@property(strong,nonatomic)UIButton *btnMenu;
 @end

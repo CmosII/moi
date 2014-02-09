@@ -9,10 +9,16 @@
 #import "htssAppDelegate.h"
 
 @implementation htssAppDelegate
+@synthesize isAR,userName,userCategory,isSafariOn;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    isAR = [defaults boolForKey:@"isAR"];
+    
+    userName = [defaults stringForKey:@"userName"];
+    
     return YES;
 }
 							
